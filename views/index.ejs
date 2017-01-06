@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html ng-app="myApp" >
-  <head>
+<html ng-app="myApp">
+<head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <h1>This is the index page</h1>
-    <a ui-sref="about">About</a>
-    <a ui-sref="profile">Profile</a>
-    <a ui-sref="home">Home</a>
-    <div ui-view=""></div>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
+          integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+</head>
+<body>
 
-    <!--Linking angular and client.js files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
-    <script src="/public/scriptfiles/client.js"></script>
-  </body>
+<!--<h1><%= title %></h1>-->
+<!--<p>Welcome to <%= title %></p>-->
+
+<nav class="navbar navbar-light bg-faded">
+    <div class="container">
+        <a class="navbar-brand" href="/">Silver Tec</a>
+        <ul class="nav navbar-nav float-xs-right">
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="profile">My Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="about">About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<h1>This is the index page</h1>
+<main ui-view="">Loading...</main>
+
+
+<!--Linking angular and client.js files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+<script src="/public/scriptfiles/client.js"></script>
+</body>
 </html>
