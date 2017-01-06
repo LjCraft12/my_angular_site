@@ -1,5 +1,5 @@
 console.log('App.js is running');
-var app = angular.module('myApp', ['ui.router']);
+const app = angular.module('myApp', ['ui.router']);
 
 // Setting up routes to all pages. use double quotes to declare route name and routing
 app.config(function ($stateProvider, $urlRouterProvider) {
@@ -9,21 +9,22 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: "/templates/home.html", // destination of actual page to view
             controller: "homeController", // controller for page that is viewing
             controllerAs: "$ctrl" // alias for page controller
-        })
+        });
     $stateProvider
         .when("about", {
             url: "/about",
+            template: "<h1>This the home page based on hard coding</h1>",
             templateUrl: "/templates/about.html",
             controller: "aboutController",
             controllerAs: "$ctrl"
-        })
+        });
     $stateProvider
         .when("profile", {
             url: "/profile",
             templateUrl: "/templates/profile.html",
             controller: "profileController",
             controllerAs: "$ctrl"
-        })
+        });
     $urlRouterProvider.otherwise("/"); // If a page requested that doesn't exist go to the home page
 
 });
