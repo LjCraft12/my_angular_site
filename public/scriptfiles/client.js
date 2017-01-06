@@ -39,4 +39,4 @@ app.controller('aboutController', function () {
 app.controller('profileController', function () {
     this.title = 'Welcome to the profile page';
     console.log('Profile page is showing');
-})
+});
